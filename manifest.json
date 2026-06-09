@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "locale": "C.UTF-8",
+  "metadata": {
+    "appmode": "python-streamlit",
+    "entrypoint": "app"
+  },
+  "python": {
+    "version": "3.11.9",
+    "package_manager": {
+      "name": "pip",
+      "version": "25.2",
+      "package_file": "requirements.txt"
+    }
+  },
+  "environment": {
+    "python": {
+      "requires": ">=3.10"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "3d7cc74dd91bcc92514d6d01bf3adacc"
+    },
+".gitignore": {
+      "checksum": "57176784de5e7f3746b0cdf0cd102534"
+    },
+    ".streamlit/config.toml": {
+      "checksum": "57a49407673a89b116334bbadd301168"
+    },
+    "LICENSE": {
+      "checksum": "77a6bc98b725ae928caa95863af946de"
+    },
+    "README.md": {
+      "checksum": "07841adf426f2e071f7c4f0c50f5e970"
+    },
+    "app.py": {
+      "checksum": "923ac1b0d147ca17af5cc485b3ca7252"
+    },
+    "pyproject.toml": {
+      "checksum": "903f7b4995d8b47dd6fd9edaca5617f9"
+    },
+    "queries.py": {
+      "checksum": "c9911838e96c3c0e816acd19cc311f34"
+    },
+    "uv.lock": {
+      "checksum": "4ce10f82dcd8e7da4f17da823c0f1a50"
+    }
+  }
+}
