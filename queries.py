@@ -76,6 +76,7 @@ class QueryService:
             server_hostname=SERVER_HOSTNAME,
             http_path=os.getenv("DATABRICKS_HTTP_PATH"),
             credentials_provider=credentials_provider,
+            _tls_no_verify=True
         ) as conn:
             cursor = conn.cursor()
             cursor.execute(query)
