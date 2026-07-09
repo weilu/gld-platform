@@ -1,0 +1,12 @@
+{
+    "https://datanalytics-int.worldbank.org": {
+        "server_url": "https://datanalytics-int.worldbank.org",
+       "filename": ".",
+        "app_url": "https://datanalytics-int.worldbank.org/content/f657f177-5de7-45ee-b98a-c917506acfbe/",
+        "app_id": "1709",
+        "app_guid": "f657f177-5de7-45ee-b98a-c917506acfbe",
+        "title": "gld-platform",
+        "app_mode": "python-streamlit",
+        "app_store_version": 1
+    }
+}

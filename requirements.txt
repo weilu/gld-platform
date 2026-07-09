@@ -170,3 +170,5 @@ urllib3==2.6.3
     #   requests
 watchdog==6.0.0 ; sys_platform != 'darwin'
     # via streamlit
+pyyaml
+python-dotenv 

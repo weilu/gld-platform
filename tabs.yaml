@@ -1,0 +1,173 @@
+- id: data
+  label: Data
+  note: null
+  groups:
+    - label: Geographic Breakdown
+      cols:
+        - {var: urban,  def: "Urban/Rural"}
+        - {var: supid,  def: "Subnational identifier"}
+    - label: Demographics
+      cols:
+        - {var: hsize, def: "Household Size"}
+        - {var: age,   def: "Age"}
+        - {var: male,  def: "Gender"}
+    - label: Education
+      cols:
+        - {var: educat7, def: "Years of education: 7 Categories"}
+        - {var: educat5, def: "Years of education: 5 Categories"}
+        - {var: educat4, def: "Years of education: 4 Categories"}
+    - label: Vocational Training
+      cols:
+        - {var: vocational,          def: "Any vocational training"}
+        - {var: vocational_type,     def: "Type"}
+        - {var: vocational_length_l, def: "Length"}
+        - {var: vocational_financed, def: "Financed by"}
+    - label: Labor Status
+      cols:
+        - {var: lstatus,         def: "Labor market status"}
+        - {var: underemployment, def: "Underemployment"}
+        - {var: nlfreason,       def: "Reason for not in LF"}
+        - {var: empstat,         def: "Type of employment"}
+    - label: "Main Job — Occupation"
+      cols:
+        - {var: occup,        def: "Occupation type: 10 Categories"}
+        - {var: occup_isco_x, def: "Occupation in ISCO codes"}
+        - {var: isco_version, def: "ISCO version"}
+    - label: "Main Job — Industry"
+      cols:
+        - {var: industrycat10,      def: "Industry type: 10 categories"}
+        - {var: industrycat_isic_x, def: "Industry in ISIC codes"}
+        - {var: isic_version,       def: "ISIC Version"}
+    - label: "Main Job — Wages & Hours"
+      cols:
+        - {var: wage_no_compen, def: "Wage"}
+        - {var: whours,         def: "Hours of Work"}
+        - {var: unitwage,       def: "Wage payment interval"}
+    - label: "Main Job — Job Quality"
+      cols:
+        - {var: contract,  def: "Contract"}
+        - {var: healthins, def: "Health Insurance"}
+        - {var: socialsec, def: "Social Security"}
+    - label: "Main Job — Firm Size"
+      cols:
+        - {var: firmsize_l, def: "Firm size: Lower limit"}
+        - {var: firmsize_u, def: "Firm size: Upper limit"}
+    - label: Second Job
+      cols:
+        - {var: empstat_2, def: "Is there second job information"}
+    - label: Recall Information
+      cols:
+        - {var: lstatus_year, def: "Is there 1 year recall information"}
+    - label: Migration
+      cols:
+        - {var: migrated_binary,       def: "Migrated (binary)"}
+        - {var: migrated_years,        def: "Years since migration"}
+        - {var: migrated_from_urban,   def: "Migrated from urban"}
+        - {var: migrated_from_cat,     def: "Migrated from (category)"}
+        - {var: migrated_from_country, def: "Migrated from country"}
+        - {var: migrated_reason,       def: "Reason for migration"}
+    - label: Disability
+      cols:
+        - {var: eye_dsablty,    def: "Disability (eye)"}
+        - {var: hear_dsablty,   def: "Disability (hearing)"}
+        - {var: walk_dsablty,   def: "Disability (walking)"}
+        - {var: conc_dsord,     def: "Concentration difficulty"}
+        - {var: slfcre_dsablty, def: "Self-care disability"}
+        - {var: comm_dsablty,   def: "Communication disability"}
+    - label: Survey Details
+      cols:
+        - {var: icls_v,                    def: "ICLS Version"}
+        - {var: survname,                  def: "Survey Name"}
+        - {var: nationally_representative, def: "Nationally Representative"}
+    - label: "Potentials (not pre-constructed)"
+      cols:
+        - {var: informality,       def: "Informal Sector"}
+        - {var: real_monthly_wage, def: "Real Monthly Earnings $"}
+
+- id: area
+  label: Area Disaggregation
+  note: "subnatid vars are admin units and represent different things in different countries and years. Sometimes not admin units."
+  groups:
+    - label: Area Disaggregation
+      cols:
+        - {var: subnatid1,   def: "Level 1 Subnational ID available"}
+        - {var: n_subnatid1, def: "Level 1 Subnational ID unique values"}
+        - {var: subnatid2,   def: "Level 2 Subnational ID available"}
+        - {var: n_subnatid2, def: "Level 2 Subnational ID unique values"}
+        - {var: subnatid3,   def: "Level 3 Subnational ID available"}
+        - {var: n_subnatid3, def: "Level 3 Subnational ID unique values"}
+        - {var: subnatid4,   def: "Level 4 Subnational ID available"}
+        - {var: n_subnatid4, def: "Level 4 Subnational ID unique values"}
+
+- id: occup
+  label: Occupation Details
+  note: "ISCO depth: <75% ending in zero = likely 4-digit; ≥80% ending in zero = likely 3-digit; ≥80% ending in 00 = likely 2-digit. First jobs only."
+  groups:
+    - label: Occupation Details
+      cols:
+        - {var: occup,         def: "Occupation type: 10 Categories"}
+        - {var: present,       def: "Occupation in ISCO codes"}
+        - {var: isco_version,  def: "ISCO version"}
+        - {var: likely_4digit, def: "Likely at 4 digits"}
+        - {var: likely_3digit, def: "Likely at 3 digits"}
+        - {var: likely_2digit, def: "Likely at 2 digits"}
+
+- id: industry
+  label: Industry Details
+  note: "ISIC depth: Single letters (A–U) = Section; 2 digits = Division; 3 digits = Group; 4 digits = Class. Majority share ≥50% flags likely depth."
+  groups:
+    - label: Industry Details
+      cols:
+        - {var: industrycat10,      def: "Industry type: 10 Categories"}
+        - {var: isic_present,       def: "Industry in ISIC codes"}
+        - {var: isic_version,       def: "ISIC version"}
+        - {var: isic_likely_4digit, def: "Likely at 4 digits (class)"}
+        - {var: isic_likely_3digit, def: "Likely at 3 digits (group)"}
+        - {var: isic_likely_2digit, def: "Likely at 2 digits (division)"}
+        - {var: section_present,    def: "Section level codes present (A–U)"}
+
+- id: secondjob
+  label: Second Job
+  note: null
+  groups:
+    - label: Second Job Details
+      cols:
+        - {var: empstat_2,       def: "Type of employment: Second Job"}
+        - {var: occup_2,         def: "Occupation type: Second Job"}
+        - {var: industrycat10_2, def: "Industry Type: Second Job"}
+        - {var: wage_total_2,    def: "Wage: Second Job"}
+        - {var: whours_2,        def: "Hours of work: Second Job"}
+        - {var: unitwage_2,      def: "Wage payment interval: Second Job"}
+        - {var: firmsize_l_2,    def: "Firm size lower limit: Second Job"}
+        - {var: firmsize_u_2,    def: "Firm size upper limit: Second Job"}
+
+- id: recall
+  label: Yearly Recall
+  note: null
+  groups:
+    - label: Labor Status
+      cols:
+        - {var: lstatus_year,         def: "Labor market status: Year"}
+        - {var: underemployment_year, def: "Underemployment: Year"}
+        - {var: nlfreason_year,       def: "Reason for not in LF: Year"}
+        - {var: unempldur_l_year,     def: "Unemployment duration (lower): Year"}
+        - {var: unempldur_u_year,     def: "Unemployment duration (upper): Year"}
+    - label: Main Job
+      cols:
+        - {var: empstat_year,       def: "Type of employment: Year"}
+        - {var: occup_year,         def: "Occupation type: Year"}
+        - {var: industrycat10_year, def: "Industry Type: Year"}
+        - {var: wage_total_year,    def: "Wage: Year"}
+        - {var: whours_year,        def: "Hours of work: Year"}
+        - {var: unitwage_year,      def: "Wage payment interval: Year"}
+        - {var: contract_year,      def: "Contract: Year"}
+        - {var: healthins_year,     def: "Health Insurance: Year"}
+        - {var: socialsec_year,     def: "Social Security: Year"}
+    - label: Second Job
+      cols:
+        - {var: empstat_2_year,        def: "Type of employment: Second Job Year"}
+        - {var: occup_2_year,          def: "Occupation type: Second Job Year"}
+        - {var: industrycat10_2_year,  def: "Industry Type: Second Job Year"}
+        - {var: wage_total_2_year,     def: "Wage: Second Job Year"}
+        - {var: whours_2_year,         def: "Hours of work: Second Job Year"}
+        - {var: unitwage_total_2_year, def: "Wage payment interval: Second Job Year"}
